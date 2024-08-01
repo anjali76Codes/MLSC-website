@@ -5,34 +5,39 @@ import Leaderboard from "../pages/Leaderboard";
 import Project from "../pages/Project";
 import Team from "../pages/Team";
 import Works from "../pages/Works";
+import Memories from "../pages/Memories";
 
 export const routes = [
     {
         path: '/',
-        element: <Home/>,
+        element: <Home />,
     },
     {
         path: '/about',
-        element: <About/>,
+        element: <About />,
     },
     {
         path: '/team',
-        element: <Team/>,
+        element: <Team />,
     },
     {
         path: '/events',
-        element: <Events/>,
+        element: <Events />,
     },
     {
         path: '/project',
-        element: <Project/>,
+        element: <Project />,
     },
     {
         path: '/works',
-        element: <Works/>,
+        element: <Works />,
     },
     {
         path: '/leaderboard',
-        element: <Leaderboard/>,
+        element: <Leaderboard />,
+    },
+    {
+        path: '/memories', 
+        element: <Memories />,
     },
 ];

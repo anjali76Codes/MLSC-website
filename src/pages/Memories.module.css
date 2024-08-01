@@ -3,7 +3,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: rgb(25, 15, 41);
+    background-color: rgb(12, 2, 28);
 }
 
 .bg {
@@ -47,7 +47,7 @@ h1 > span {
     margin-left: .3rem;
     color: rgb(255, 255, 255);
 }
-
+/* 
 @keyframes animate-gradient {
     0% {
         background-position: 0% 50%;
@@ -60,16 +60,15 @@ h1 > span {
     100% {
         background-position: 0% 50%;
     }
-}
+} */
 
 .sections {
     padding: 4rem 2rem;
-    background-color: rgb(27, 6, 76); /* Background color to match existing theme */
+    background-color: rgb(37, 27, 61); /* Match background color with the hero section */
 }
 
 .section {
     margin-bottom: 3rem;
-    
 }
 
 .section h2 {
@@ -81,15 +80,10 @@ h1 > span {
 .section_content {
     display: flex;
     flex-direction: column;
-    
-}
-
-.section p {
-    background-image: linear-gradient(299deg, rgb(65, 105, 225), rgb(56, 66, 255), rgb(26, 67, 191), rgb(0, 255, 249));
 }
 
 .option {
-    background-image: linear-gradient(299deg, rgb(65, 105, 225), rgb(56, 66, 255), rgb(26, 67, 191), rgb(0, 255, 249));
+    background-color: rgb(48, 36, 71); /* Darker shade to contrast with the section background */
     padding: 2rem;
     margin-bottom: 1rem;
     border-radius: 8px;
@@ -99,12 +93,10 @@ h1 > span {
 .option h3 {
     font-size: 1.5rem;
     margin-bottom: .5rem;
-    
 }
 
 .option p {
     font-size: 1rem;
-    
 }
 
 /* Responsive Design */
