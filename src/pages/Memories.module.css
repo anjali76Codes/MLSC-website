@@ -1,88 +1,73 @@
 .container {
-    padding: 20px;
-    background: #000; /* Background color for the page */
-  }
-  
-  .heading {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #fff;
-  }
-  
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-  }
-  
-  .card {
-    position: relative;
-    width: 300px; /* Fixed width for phone-like appearance */
-    margin:20px;
-  }
-  
-  .phoneBorder {
-    position: relative;
-    width: 100%;
-    padding-top: 200%; /* Aspect ratio for phone-like container */
-    border: 5px solid #fff; /* Phone border color */
-    border-radius: 40px;
-    background: #333; /* Inner background color */
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  .phoneBorder::before,
-  .phoneBorder::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    border-radius: 10px;
-  }
-  
-  .phoneBorder::before {
-    top: 8px;
-    width: 60%;
-    height: 8px;
-  }
-  
-  .phoneBorder::after {
-    bottom: 8px;
-    width: 20px;
-    height: 4px;
-  }
-  
-  .video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .card:hover .video {
-    filter: brightness(80%);
-  }
-  
-  .description {
-    padding: 10px;
-    font-size: 14px;
-    color: #fff;
-    text-align: center;
-    background: #333;
-    border-top: 1px solid #ddd;
-  }
-  
-  .above {
-    align-self: flex-start;
-  }
-  
-  .below {
-    align-self: flex-end;
-  }
-  
+  padding: 20px;
+  background-color: rgb(18, 18, 91);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 37px;
+}
+
+.card {
+  position: relative;
+  width: 300px; /* Adjust as needed */
+  border-radius: 20px 10px 5px 12px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 5px 5px 12px rgba(235, 231, 231, 0.867), 0 12px 24px rgba(0, 0, 0, 0.1); /* Enhanced box shadow effect */
+  background: rgba(124, 124, 155, 0.3);
+  margin: 20px; /* Margin around each card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoBox {
+  width: 100%; /* Full width of the card */
+  height: 400px; /* Fixed height for the video box */
+  border-radius: 15px; /* Rounded corners for video box */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.videoBox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(237, 135, 18, 0.4); /* Enhanced box shadow on hover */
+}
+
+.card:hover .video {
+  filter: brightness(80%);
+}
+
+.description {
+  padding: 23px;
+  font-size: 16px;
+  color: whitesmoke;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+/* Additional transition for the card itself on hover */
+.card:hover {
+  transform: translateY(-10px); /* Slightly lift the card on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4), 0 24px 48px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+}
+
+/* Additional hover effect for the card */
+.card:hover .description {
+  color: #ffa500; /* Change text color on hover */
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
