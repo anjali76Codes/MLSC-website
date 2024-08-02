@@ -1,6 +1,16 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .container {
   padding: 20px;
   background-color: rgb(18, 18, 91);
+  animation: fadeIn 1s ease-in-out;
 }
 
 .heading {
@@ -20,20 +30,30 @@
 .card {
   position: relative;
   width: 300px; /* Adjust as needed */
-  border-radius: 20px 10px 5px 12px; /* Rounded corners */
+  border-radius: 10px 10px 5px 1px; 
   overflow: hidden;
-  box-shadow: 5px 5px 12px rgba(235, 231, 231, 0.867), 0 12px 24px rgba(0, 0, 0, 0.1); /* Enhanced box shadow effect */
   background: rgba(124, 124, 155, 0.3);
   margin: 20px; /* Margin around each card */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 0.2rem solid  rgba(124, 124, 155, 0.3);
+}
+
+.videoWrapper {
+  width: 100%;
+  padding: 10px; 
+  border: none;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(124, 124, 155, 0.3);
 }
 
 .videoBox {
-  width: 100%; /* Full width of the card */
+  position: relative;
+  width: 100%;
   height: 400px; /* Fixed height for the video box */
-  border-radius: 15px; /* Rounded corners for video box */
+  border-radius: 10px; /* Rounded corners for video box */
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 0.2rem solid black;
 }
 
 .video {
@@ -43,7 +63,11 @@
   transition: filter 0.3s ease;
 }
 
-.videoBox:hover {
+.blurred {
+  filter: blur(5px);
+}
+
+.videoWrapper:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(237, 135, 18, 0.4); /* Enhanced box shadow on hover */
 }
@@ -52,13 +76,13 @@
   filter: brightness(80%);
 }
 
-.description {
+/* .description {
   padding: 23px;
   font-size: 16px;
   color: whitesmoke;
   text-align: center;
   border-top: 1px solid #333;
-}
+} */
 
 /* Additional transition for the card itself on hover */
 .card:hover {
@@ -70,4 +94,85 @@
 .card:hover .description {
   color: #ffa500; /* Change text color on hover */
   transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Custom controls */
+/* Other styles remain the same */
+
+/* Existing styles */
+
+/* Existing styles */
+
+/* Existing styles */
+
+.videoBox {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Fixed height for the video box */
+  border-radius: 10px; /* Rounded corners for video box */
+  overflow: hidden;
+  border: 0.2rem solid black;
+}
+
+.customControls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.playButton {
+  font-size: 48px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.topRightControls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.volumeControl,
+.speedControl {
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.speedControl {
+  margin-top: 5px;
+}
+
+.bottomControls {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 5px; /* Padding around the controls */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.seekBar {
+  width: 100%;
+  cursor: pointer;
+}
+
+.timeDisplay {
+  color: white;
+  font-size: 16px;
 }
