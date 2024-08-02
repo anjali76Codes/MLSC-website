@@ -1,9 +1,9 @@
-import { useEffect } from 'react'
-import Footer from "../layouts/Footer"
-import globe from 'vanta/src/vanta.globe'
-import styles from './Home.module.css'
-import About from './About'
-import CounterUp from '../components/CounterUp'
+import { useEffect } from 'react';
+import Footer from "../layouts/Footer";
+import globe from 'vanta/src/vanta.globe';
+import styles from './Home.module.css';
+import About from './About';
+import CounterUp from '../components/CounterUp';
 
 const Home = () => {
 
@@ -19,8 +19,8 @@ const Home = () => {
       scaleMobile: 1.00,
       color: 0x273ce8,
       backgroundColor: 0x190f29
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <main>
@@ -64,7 +64,7 @@ const Home = () => {
       <CounterUp />
       <Footer />
     </main>
-  )
+  );
 }
 
-export default Home
+export default Home;

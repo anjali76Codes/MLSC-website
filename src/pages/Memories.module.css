@@ -1,150 +1,88 @@
-.home_container {
+.container {
+    padding: 20px;
+    background: #000; /* Background color for the page */
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .card {
+    position: relative;
+    width: 300px; /* Fixed width for phone-like appearance */
+    margin:20px;
+  }
+  
+  .phoneBorder {
     position: relative;
     width: 100%;
-    height: 100%;
+    padding-top: 200%; /* Aspect ratio for phone-like container */
+    border: 5px solid #fff; /* Phone border color */
+    border-radius: 40px;
+    background: #333; /* Inner background color */
     overflow: hidden;
-    background-color: rgb(12, 2, 28);
-}
-
-.bg {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.home_content {
-    display: flex;
-    flex-direction: column;
-}
-
-.hero_title {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .phoneBorder::before,
+  .phoneBorder::after {
+    content: "";
     position: absolute;
-    top: 40%;
-    left: 10%;
-}
-
-.hero_title h1 {
-    font-size: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 10px;
+  }
+  
+  .phoneBorder::before {
+    top: 8px;
+    width: 60%;
+    height: 8px;
+  }
+  
+  .phoneBorder::after {
+    bottom: 8px;
+    width: 20px;
+    height: 4px;
+  }
+  
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    color: rgb(255, 255, 255);
-    line-height: 1;
-}
-
-h1 > span {
-    color: rgb(255, 255, 255);
-    background-image: linear-gradient(299deg, rgb(65, 105, 225), rgb(56, 66, 255), rgb(26, 67, 191), rgb(0, 255, 249));
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 300% 300%;
-    animation: animate-gradient 3s ease-in-out alternate infinite;
-}
-
-.hero_title p {
-    font-size: 25px;
-    font-weight: 600;
-    margin-left: .3rem;
-    color: rgb(255, 255, 255);
-}
-/* 
-@keyframes animate-gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-} */
-
-.sections {
-    padding: 4rem 2rem;
-    background-color: rgb(37, 27, 61); /* Match background color with the hero section */
-}
-
-.section {
-    margin-bottom: 3rem;
-}
-
-.section h2 {
-    font-size: 2rem;
-    color: rgb(255, 255, 255); /* White color for section headings */
-    margin-bottom: 1rem;
-}
-
-.section_content {
-    display: flex;
-    flex-direction: column;
-}
-
-.option {
-    background-color: rgb(48, 36, 71); /* Darker shade to contrast with the section background */
-    padding: 2rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    color: rgb(255, 255, 255); /* White color for option text */
-}
-
-.option h3 {
-    font-size: 1.5rem;
-    margin-bottom: .5rem;
-}
-
-.option p {
-    font-size: 1rem;
-}
-
-/* Responsive Design */
-@media (max-width: 750px) {
-    .home_container {
-        width: 100%;
-    }
-
-    .bg {
-        width: 100%;
-    }
-
-    .hero_title {
-        width: 100%;
-        top: 40%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-    }
-
-    .hero_title h1 {
-        font-size: 85px;
-    }
-
-    .hero_title p {
-        font-size: 20px;
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 450px) {
-    .hero_title h1 {
-        font-size: 70px;
-    }
-
-    .hero_title p {
-        font-size: 18px;
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 350px) {
-    .hero_title h1 {
-        font-size: 60px;
-    }
-
-    .hero_title p {
-        font-size: 15px;
-        margin-left: 0;
-    }
-}
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card:hover .video {
+    filter: brightness(80%);
+  }
+  
+  .description {
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    background: #333;
+    border-top: 1px solid #ddd;
+  }
+  
+  .above {
+    align-self: flex-start;
+  }
+  
+  .below {
+    align-self: flex-end;
+  }
+  

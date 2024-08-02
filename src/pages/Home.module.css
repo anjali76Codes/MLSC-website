@@ -31,83 +31,51 @@
     line-height: 1;
 }
 
-h1 > span {
-    color: rgb(255, 255, 255);
-    background-image: linear-gradient(299deg, rgb(65, 105, 225), rgb(56, 66, 255), rgb(26, 67, 191), rgb(0, 255, 249));
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 300% 300%;
-    animation: animate-gradient 3s ease-in-out alternate infinite;
-}
-
-.hero_title p {
-    font-size: 25px;
-    font-weight: 600;
-    margin-left: .3rem;
-    color: rgb(255, 255, 255);
-}
-
-@keyframes animate-gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 .sections {
     padding: 4rem 2rem;
-    background-color: rgb(27, 6, 76); /* Background color to match existing theme */
+    background-color: rgb(27, 6, 76);
+    color: whitesmoke;
+    text-align: center;
+    font-size: 25px;
 }
 
 .section {
     margin-bottom: 3rem;
-    
+    background-image: linear-gradient(299deg, rgb(65, 105, 225), rgb(56, 66, 255), rgb(26, 67, 191), rgb(0, 255, 249));
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
 }
 
 .section h2 {
     font-size: 2rem;
-    color: rgb(255, 255, 255); /* White color for section headings */
-    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 2rem; /* Increased margin for better spacing */
 }
 
 .section_content {
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.section p {
-    background-image: linear-gradient(299deg, rgb(65, 105, 225), rgb(56, 66, 255), rgb(26, 67, 191), rgb(0, 255, 249));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; /* Increased gap for better spacing */
 }
 
 .option {
     background-image: linear-gradient(299deg, rgb(65, 105, 225), rgb(56, 66, 255), rgb(26, 67, 191), rgb(0, 255, 249));
     padding: 2rem;
-    margin-bottom: 1rem;
     border-radius: 8px;
-    color: rgb(255, 255, 255); /* White color for option text */
+    color: rgb(255, 255, 255);
+    text-align: center;
 }
 
 .option h3 {
     font-size: 1.5rem;
     margin-bottom: .5rem;
-    
 }
 
 .option p {
     font-size: 1rem;
-    
 }
 
-/* Responsive Design */
 @media (max-width: 750px) {
     .home_container {
         width: 100%;
